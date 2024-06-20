@@ -1,4 +1,4 @@
-# LOGICA-DE-PROGRAMACION-1-SIN-1A
+# Password Generator
 
 This Python code generates a secure password by meeting certain strength criteria. Here is how the code works:
 
