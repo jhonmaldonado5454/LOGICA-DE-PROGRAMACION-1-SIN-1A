@@ -8,7 +8,7 @@ A simple graphical password generator implemented in Python using tkinter for th
 - [Installation](#installation)
 - [Usage](#usage)
 - [Dependencies](#dependencies)
-- [License](#license)
+
 
 ## Features
 
