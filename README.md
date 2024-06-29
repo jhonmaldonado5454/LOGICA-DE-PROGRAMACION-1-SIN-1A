@@ -18,7 +18,7 @@ length_entry = tk.Entry(window): Creates an entry widget where the user can inpu
 generate_button = tk.Button(window, text="Generate Password", command=generate_password): Creates a button widget that triggers the generate_password() function when clicked.
 password_label = tk.Label(window, text=""): Creates a label widget for displaying the generated password.
 
-4.Widget Packing:
+4. Widget Packing:
 .pack(): Method used to display widgets in the tkinter window. The pady parameter adds vertical padding around each widget to improve spacing and appearance.
 
 Main Loop:
