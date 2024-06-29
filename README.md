@@ -2,31 +2,25 @@
 
 This Python code generates a secure password by meeting certain strength criteria. Here is how the code works:
 
-1. Module import:
- - The `random` module is imported to generate random characters.
+1. Imports and Function Definitions:
+import tkinter as tk: Imports the tkinter module and assigns it an alias tk.
+from tkinter import messagebox: Imports the messagebox module from tkinter for displaying error messages.
 
-2. `is_strong` function:
- - I defined a function called `is_strong` that checks if a password meets the following criteria:
- - At least one capital letter.
- - At least one lowercase letter.
- - At least one digit.
- - At least one special character (from a specific set `!@#$%^&*()`).
+2. Function Definitions:
+is_strong(password): Checks if the password meets criteria for a strong password (has uppercase, lowercase, digit, and special characters).
+generate_password(): Generates a strong password based on user input, updates the GUI label with the generated password, and handles error messages for invalid inputs.
 
-3. Request password length:
- - Prompts the user to enter the desired password length.
- - If the length is less than or equal to 3, prompts the user to enter a valid length again (minimum 4).
+3. tkinter GUI Setup:
+window = tk.Tk(): Creates the main tkinter window.
+window.title("Password Generator"): Sets the title of the window.
+length_label = tk.Label(window, text="Enter Password Length:"): Creates a label widget for prompting the user to enter password length.
+length_entry = tk.Entry(window): Creates an entry widget where the user can input the password length.
+generate_button = tk.Button(window, text="Generate Password", command=generate_password): Creates a button widget that triggers the generate_password() function when clicked.
+password_label = tk.Label(window, text=""): Creates a label widget for displaying the generated password.
 
-4. Define possible characters:
- - I defined a string with all possible characters that can be part of the password (`ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()`).
+4.Widget Packing:
+.pack(): Method used to display widgets in the tkinter window. The pady parameter adds vertical padding around each widget to improve spacing and appearance.
 
-5. Password generation:
- - Used a `for` loop to generate a random password of the specified length, selecting random characters from the string of possible characters.
+Main Loop:
+window.mainloop(): Starts the tkinter event loop, which listens for events (like button clicks) and keeps the GUI active and responsive.
 
-6. Password verification and regeneration:
- - Used a `while` loop to check if the generated password meets the strength criteria defined by the `is_strong` function.
- - If the password does not meet the criteria, a new password is regenerated until it meets all requirements.
-
-7. Show the generated password:
- - Finally, the generated password that meets all security criteria is printed.
-
-In short, this code generates a strong password that includes uppercase letters, lowercase letters, digits and special characters, thus ensuring its strength and complexity.
